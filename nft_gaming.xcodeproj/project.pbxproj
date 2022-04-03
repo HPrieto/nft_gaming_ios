@@ -1,0 +1,830 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		43100DD027F1783200FB3A25 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43100DCF27F1783200FB3A25 /* MainCoordinator.swift */; };
+		43100DD227F178E800FB3A25 /* AssetCollectionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43100DD127F178E800FB3A25 /* AssetCollectionDetailViewController.swift */; };
+		43100DD427F1793400FB3A25 /* AssetCollectionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43100DD327F1793400FB3A25 /* AssetCollectionListViewModel.swift */; };
+		43100DD627F17BF600FB3A25 /* AssetCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43100DD527F17BF600FB3A25 /* AssetCollectionHeaderView.swift */; };
+		43100DDA27F94EFB00FB3A25 /* OSAssetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43100DD927F94EFB00FB3A25 /* OSAssetCollectionViewCell.swift */; };
+		4326B5F227F142D2006AD1A1 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4326B5EF27F142D2006AD1A1 /* UIImage+Extensions.swift */; };
+		4326B5F327F142D2006AD1A1 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4326B5F027F142D2006AD1A1 /* Font+Extensions.swift */; };
+		4326B5F427F142D2006AD1A1 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4326B5F127F142D2006AD1A1 /* Double+Extensions.swift */; };
+		4326B5F627F1431A006AD1A1 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4326B5F527F1431A006AD1A1 /* UIFont+Extensions.swift */; };
+		4326B5FA27F145AD006AD1A1 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4326B5F927F145AD006AD1A1 /* UITableView+Extensions.swift */; };
+		4326B5FC27F14662006AD1A1 /* AssetCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4326B5FB27F14662006AD1A1 /* AssetCollectionTableViewCell.swift */; };
+		4386001327F1399800F8EA11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386001227F1399800F8EA11 /* AppDelegate.swift */; };
+		4386001527F1399800F8EA11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386001427F1399800F8EA11 /* SceneDelegate.swift */; };
+		4386001D27F1399800F8EA11 /* nft_gaming.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4386001B27F1399800F8EA11 /* nft_gaming.xcdatamodeld */; };
+		4386001F27F1399D00F8EA11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4386001E27F1399D00F8EA11 /* Assets.xcassets */; };
+		4386002227F1399D00F8EA11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4386002027F1399D00F8EA11 /* LaunchScreen.storyboard */; };
+		4386002D27F1399E00F8EA11 /* nft_gamingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386002C27F1399E00F8EA11 /* nft_gamingTests.swift */; };
+		4386003727F1399E00F8EA11 /* nft_gamingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386003627F1399E00F8EA11 /* nft_gamingUITests.swift */; };
+		4386003927F1399E00F8EA11 /* nft_gamingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386003827F1399E00F8EA11 /* nft_gamingUITestsLaunchTests.swift */; };
+		4386004D27F13A2100F8EA11 /* open_sea_db_model_v1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4386004927F13A2100F8EA11 /* open_sea_db_model_v1.xcdatamodeld */; };
+		4386004E27F13A2100F8EA11 /* CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386004B27F13A2100F8EA11 /* CoreDataHelpers.swift */; };
+		4386004F27F13A2100F8EA11 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386004C27F13A2100F8EA11 /* CoreDataStack.swift */; };
+		4386005327F13A3000F8EA11 /* MockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386005027F13A3000F8EA11 /* MockedData.swift */; };
+		4386005427F13A3000F8EA11 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386005127F13A3000F8EA11 /* Models.swift */; };
+		4386005527F13A3000F8EA11 /* Models+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386005227F13A3000F8EA11 /* Models+CoreData.swift */; };
+		4386006027F13A7700F8EA11 /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386005827F13A7700F8EA11 /* CancelBag.swift */; };
+		4386006127F13A7700F8EA11 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386005927F13A7700F8EA11 /* Helpers.swift */; };
+		4386006227F13A7700F8EA11 /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386005A27F13A7700F8EA11 /* APICall.swift */; };
+		4386006327F13A7700F8EA11 /* WebRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386005B27F13A7700F8EA11 /* WebRepository.swift */; };
+		4386006427F13A7700F8EA11 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386005C27F13A7700F8EA11 /* Store.swift */; };
+		4386006527F13A7700F8EA11 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386005D27F13A7700F8EA11 /* Loadable.swift */; };
+		4386006627F13A7700F8EA11 /* LazyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386005E27F13A7700F8EA11 /* LazyList.swift */; };
+		4386006727F13A7700F8EA11 /* NetworkingHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386005F27F13A7700F8EA11 /* NetworkingHelpers.swift */; };
+		4386006A27F13AE600F8EA11 /* OpenSeaAssetsWebRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386006927F13AE600F8EA11 /* OpenSeaAssetsWebRepository.swift */; };
+		4386006D27F13B0600F8EA11 /* OpenSeaAssetsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386006C27F13B0600F8EA11 /* OpenSeaAssetsInteractor.swift */; };
+		4386007227F13FA000F8EA11 /* AssetCollectionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386007127F13FA000F8EA11 /* AssetCollectionListViewController.swift */; };
+		4386007427F1402D00F8EA11 /* AssetCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386007327F1402D00F8EA11 /* AssetCollectionViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4386002927F1399E00F8EA11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4386000727F1399800F8EA11 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4386000E27F1399800F8EA11;
+			remoteInfo = nft_gaming;
+		};
+		4386003327F1399E00F8EA11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4386000727F1399800F8EA11 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4386000E27F1399800F8EA11;
+			remoteInfo = nft_gaming;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		43100DCF27F1783200FB3A25 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		43100DD127F178E800FB3A25 /* AssetCollectionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCollectionDetailViewController.swift; sourceTree = "<group>"; };
+		43100DD327F1793400FB3A25 /* AssetCollectionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCollectionListViewModel.swift; sourceTree = "<group>"; };
+		43100DD527F17BF600FB3A25 /* AssetCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCollectionHeaderView.swift; sourceTree = "<group>"; };
+		43100DD927F94EFB00FB3A25 /* OSAssetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSAssetCollectionViewCell.swift; sourceTree = "<group>"; };
+		4326B5EF27F142D2006AD1A1 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		4326B5F027F142D2006AD1A1 /* Font+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
+		4326B5F127F142D2006AD1A1 /* Double+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		4326B5F527F1431A006AD1A1 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		4326B5F927F145AD006AD1A1 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		4326B5FB27F14662006AD1A1 /* AssetCollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCollectionTableViewCell.swift; sourceTree = "<group>"; };
+		4386000F27F1399800F8EA11 /* nft_gaming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nft_gaming.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4386001227F1399800F8EA11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4386001427F1399800F8EA11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4386001C27F1399800F8EA11 /* nft_gaming.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = nft_gaming.xcdatamodel; sourceTree = "<group>"; };
+		4386001E27F1399D00F8EA11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4386002127F1399D00F8EA11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4386002327F1399D00F8EA11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4386002827F1399E00F8EA11 /* nft_gamingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nft_gamingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4386002C27F1399E00F8EA11 /* nft_gamingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nft_gamingTests.swift; sourceTree = "<group>"; };
+		4386003227F1399E00F8EA11 /* nft_gamingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nft_gamingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4386003627F1399E00F8EA11 /* nft_gamingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nft_gamingUITests.swift; sourceTree = "<group>"; };
+		4386003827F1399E00F8EA11 /* nft_gamingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nft_gamingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4386004A27F13A2100F8EA11 /* db_model_v1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = db_model_v1.xcdatamodel; sourceTree = "<group>"; };
+		4386004B27F13A2100F8EA11 /* CoreDataHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelpers.swift; sourceTree = "<group>"; };
+		4386004C27F13A2100F8EA11 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		4386005027F13A3000F8EA11 /* MockedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockedData.swift; sourceTree = "<group>"; };
+		4386005127F13A3000F8EA11 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		4386005227F13A3000F8EA11 /* Models+CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Models+CoreData.swift"; sourceTree = "<group>"; };
+		4386005827F13A7700F8EA11 /* CancelBag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
+		4386005927F13A7700F8EA11 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		4386005A27F13A7700F8EA11 /* APICall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
+		4386005B27F13A7700F8EA11 /* WebRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebRepository.swift; sourceTree = "<group>"; };
+		4386005C27F13A7700F8EA11 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		4386005D27F13A7700F8EA11 /* Loadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		4386005E27F13A7700F8EA11 /* LazyList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyList.swift; sourceTree = "<group>"; };
+		4386005F27F13A7700F8EA11 /* NetworkingHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingHelpers.swift; sourceTree = "<group>"; };
+		4386006927F13AE600F8EA11 /* OpenSeaAssetsWebRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSeaAssetsWebRepository.swift; sourceTree = "<group>"; };
+		4386006C27F13B0600F8EA11 /* OpenSeaAssetsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSeaAssetsInteractor.swift; sourceTree = "<group>"; };
+		4386007127F13FA000F8EA11 /* AssetCollectionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCollectionListViewController.swift; sourceTree = "<group>"; };
+		4386007327F1402D00F8EA11 /* AssetCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCollectionViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4386000C27F1399800F8EA11 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4386002527F1399E00F8EA11 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4386002F27F1399E00F8EA11 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		43100DCE27F1781C00FB3A25 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				43100DCF27F1783200FB3A25 /* MainCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		43100DD727F94ED900FB3A25 /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				43100DD827F94EE100FB3A25 /* OpenSea */,
+			);
+			path = Asset;
+			sourceTree = "<group>";
+		};
+		43100DD827F94EE100FB3A25 /* OpenSea */ = {
+			isa = PBXGroup;
+			children = (
+				43100DD927F94EFB00FB3A25 /* OSAssetCollectionViewCell.swift */,
+			);
+			path = OpenSea;
+			sourceTree = "<group>";
+		};
+		4326B5EE27F142D2006AD1A1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4326B5EF27F142D2006AD1A1 /* UIImage+Extensions.swift */,
+				4326B5F027F142D2006AD1A1 /* Font+Extensions.swift */,
+				4326B5F127F142D2006AD1A1 /* Double+Extensions.swift */,
+				4326B5F527F1431A006AD1A1 /* UIFont+Extensions.swift */,
+				4326B5F927F145AD006AD1A1 /* UITableView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4386000627F1399800F8EA11 = {
+			isa = PBXGroup;
+			children = (
+				4386001127F1399800F8EA11 /* nft_gaming */,
+				4386002B27F1399E00F8EA11 /* nft_gamingTests */,
+				4386003527F1399E00F8EA11 /* nft_gamingUITests */,
+				4386001027F1399800F8EA11 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4386001027F1399800F8EA11 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4386000F27F1399800F8EA11 /* nft_gaming.app */,
+				4386002827F1399E00F8EA11 /* nft_gamingTests.xctest */,
+				4386003227F1399E00F8EA11 /* nft_gamingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4386001127F1399800F8EA11 /* nft_gaming */ = {
+			isa = PBXGroup;
+			children = (
+				4386004627F139D900F8EA11 /* src */,
+				4386001227F1399800F8EA11 /* AppDelegate.swift */,
+				4386001427F1399800F8EA11 /* SceneDelegate.swift */,
+				4386001E27F1399D00F8EA11 /* Assets.xcassets */,
+				4386002027F1399D00F8EA11 /* LaunchScreen.storyboard */,
+				4386002327F1399D00F8EA11 /* Info.plist */,
+				4386001B27F1399800F8EA11 /* nft_gaming.xcdatamodeld */,
+			);
+			path = nft_gaming;
+			sourceTree = "<group>";
+		};
+		4386002B27F1399E00F8EA11 /* nft_gamingTests */ = {
+			isa = PBXGroup;
+			children = (
+				4386002C27F1399E00F8EA11 /* nft_gamingTests.swift */,
+			);
+			path = nft_gamingTests;
+			sourceTree = "<group>";
+		};
+		4386003527F1399E00F8EA11 /* nft_gamingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4386003627F1399E00F8EA11 /* nft_gamingUITests.swift */,
+				4386003827F1399E00F8EA11 /* nft_gamingUITestsLaunchTests.swift */,
+			);
+			path = nft_gamingUITests;
+			sourceTree = "<group>";
+		};
+		4386004627F139D900F8EA11 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				43100DD727F94ED900FB3A25 /* Asset */,
+				43100DCE27F1781C00FB3A25 /* Coordinators */,
+				4326B5EE27F142D2006AD1A1 /* Extensions */,
+				4386007027F13F8100F8EA11 /* AssetCollection */,
+				4386006B27F13AF000F8EA11 /* Interactors */,
+				4386006827F13ACF00F8EA11 /* Repositories */,
+				4386005727F13A7700F8EA11 /* Utilities */,
+				4386004827F13A0B00F8EA11 /* Persistance */,
+				4386004727F139E900F8EA11 /* Models */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		4386004727F139E900F8EA11 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4386005627F13A3F00F8EA11 /* OpenSea */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4386004827F13A0B00F8EA11 /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+				4386004B27F13A2100F8EA11 /* CoreDataHelpers.swift */,
+				4386004C27F13A2100F8EA11 /* CoreDataStack.swift */,
+				4386004927F13A2100F8EA11 /* open_sea_db_model_v1.xcdatamodeld */,
+			);
+			path = Persistance;
+			sourceTree = "<group>";
+		};
+		4386005627F13A3F00F8EA11 /* OpenSea */ = {
+			isa = PBXGroup;
+			children = (
+				4386005027F13A3000F8EA11 /* MockedData.swift */,
+				4386005127F13A3000F8EA11 /* Models.swift */,
+				4386005227F13A3000F8EA11 /* Models+CoreData.swift */,
+			);
+			path = OpenSea;
+			sourceTree = "<group>";
+		};
+		4386005727F13A7700F8EA11 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4386005827F13A7700F8EA11 /* CancelBag.swift */,
+				4386005927F13A7700F8EA11 /* Helpers.swift */,
+				4386005A27F13A7700F8EA11 /* APICall.swift */,
+				4386005B27F13A7700F8EA11 /* WebRepository.swift */,
+				4386005C27F13A7700F8EA11 /* Store.swift */,
+				4386005D27F13A7700F8EA11 /* Loadable.swift */,
+				4386005E27F13A7700F8EA11 /* LazyList.swift */,
+				4386005F27F13A7700F8EA11 /* NetworkingHelpers.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4386006827F13ACF00F8EA11 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				4386006927F13AE600F8EA11 /* OpenSeaAssetsWebRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		4386006B27F13AF000F8EA11 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				4386006C27F13B0600F8EA11 /* OpenSeaAssetsInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		4386007027F13F8100F8EA11 /* AssetCollection */ = {
+			isa = PBXGroup;
+			children = (
+				4386007127F13FA000F8EA11 /* AssetCollectionListViewController.swift */,
+				4386007327F1402D00F8EA11 /* AssetCollectionViewModel.swift */,
+				4326B5FB27F14662006AD1A1 /* AssetCollectionTableViewCell.swift */,
+				43100DD127F178E800FB3A25 /* AssetCollectionDetailViewController.swift */,
+				43100DD327F1793400FB3A25 /* AssetCollectionListViewModel.swift */,
+				43100DD527F17BF600FB3A25 /* AssetCollectionHeaderView.swift */,
+			);
+			path = AssetCollection;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4386000E27F1399800F8EA11 /* nft_gaming */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4386003C27F1399E00F8EA11 /* Build configuration list for PBXNativeTarget "nft_gaming" */;
+			buildPhases = (
+				4386000B27F1399800F8EA11 /* Sources */,
+				4386000C27F1399800F8EA11 /* Frameworks */,
+				4386000D27F1399800F8EA11 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = nft_gaming;
+			productName = nft_gaming;
+			productReference = 4386000F27F1399800F8EA11 /* nft_gaming.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4386002727F1399E00F8EA11 /* nft_gamingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4386003F27F1399E00F8EA11 /* Build configuration list for PBXNativeTarget "nft_gamingTests" */;
+			buildPhases = (
+				4386002427F1399E00F8EA11 /* Sources */,
+				4386002527F1399E00F8EA11 /* Frameworks */,
+				4386002627F1399E00F8EA11 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4386002A27F1399E00F8EA11 /* PBXTargetDependency */,
+			);
+			name = nft_gamingTests;
+			productName = nft_gamingTests;
+			productReference = 4386002827F1399E00F8EA11 /* nft_gamingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4386003127F1399E00F8EA11 /* nft_gamingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4386004227F1399E00F8EA11 /* Build configuration list for PBXNativeTarget "nft_gamingUITests" */;
+			buildPhases = (
+				4386002E27F1399E00F8EA11 /* Sources */,
+				4386002F27F1399E00F8EA11 /* Frameworks */,
+				4386003027F1399E00F8EA11 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4386003427F1399E00F8EA11 /* PBXTargetDependency */,
+			);
+			name = nft_gamingUITests;
+			productName = nft_gamingUITests;
+			productReference = 4386003227F1399E00F8EA11 /* nft_gamingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4386000727F1399800F8EA11 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					4386000E27F1399800F8EA11 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					4386002727F1399E00F8EA11 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 4386000E27F1399800F8EA11;
+					};
+					4386003127F1399E00F8EA11 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 4386000E27F1399800F8EA11;
+					};
+				};
+			};
+			buildConfigurationList = 4386000A27F1399800F8EA11 /* Build configuration list for PBXProject "nft_gaming" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4386000627F1399800F8EA11;
+			productRefGroup = 4386001027F1399800F8EA11 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4386000E27F1399800F8EA11 /* nft_gaming */,
+				4386002727F1399E00F8EA11 /* nft_gamingTests */,
+				4386003127F1399E00F8EA11 /* nft_gamingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4386000D27F1399800F8EA11 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4386002227F1399D00F8EA11 /* LaunchScreen.storyboard in Resources */,
+				4386001F27F1399D00F8EA11 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4386002627F1399E00F8EA11 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4386003027F1399E00F8EA11 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4386000B27F1399800F8EA11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43100DD627F17BF600FB3A25 /* AssetCollectionHeaderView.swift in Sources */,
+				4326B5F427F142D2006AD1A1 /* Double+Extensions.swift in Sources */,
+				43100DD027F1783200FB3A25 /* MainCoordinator.swift in Sources */,
+				43100DDA27F94EFB00FB3A25 /* OSAssetCollectionViewCell.swift in Sources */,
+				4386006427F13A7700F8EA11 /* Store.swift in Sources */,
+				4386005327F13A3000F8EA11 /* MockedData.swift in Sources */,
+				4386004F27F13A2100F8EA11 /* CoreDataStack.swift in Sources */,
+				43100DD427F1793400FB3A25 /* AssetCollectionListViewModel.swift in Sources */,
+				4386004E27F13A2100F8EA11 /* CoreDataHelpers.swift in Sources */,
+				4386006627F13A7700F8EA11 /* LazyList.swift in Sources */,
+				4386006727F13A7700F8EA11 /* NetworkingHelpers.swift in Sources */,
+				4386004D27F13A2100F8EA11 /* open_sea_db_model_v1.xcdatamodeld in Sources */,
+				4326B5FC27F14662006AD1A1 /* AssetCollectionTableViewCell.swift in Sources */,
+				4386005527F13A3000F8EA11 /* Models+CoreData.swift in Sources */,
+				4326B5FA27F145AD006AD1A1 /* UITableView+Extensions.swift in Sources */,
+				4386006327F13A7700F8EA11 /* WebRepository.swift in Sources */,
+				4386001D27F1399800F8EA11 /* nft_gaming.xcdatamodeld in Sources */,
+				4386006127F13A7700F8EA11 /* Helpers.swift in Sources */,
+				4386005427F13A3000F8EA11 /* Models.swift in Sources */,
+				4326B5F627F1431A006AD1A1 /* UIFont+Extensions.swift in Sources */,
+				4386007427F1402D00F8EA11 /* AssetCollectionViewModel.swift in Sources */,
+				4386006027F13A7700F8EA11 /* CancelBag.swift in Sources */,
+				4386007227F13FA000F8EA11 /* AssetCollectionListViewController.swift in Sources */,
+				43100DD227F178E800FB3A25 /* AssetCollectionDetailViewController.swift in Sources */,
+				4326B5F227F142D2006AD1A1 /* UIImage+Extensions.swift in Sources */,
+				4386006A27F13AE600F8EA11 /* OpenSeaAssetsWebRepository.swift in Sources */,
+				4386001327F1399800F8EA11 /* AppDelegate.swift in Sources */,
+				4386006527F13A7700F8EA11 /* Loadable.swift in Sources */,
+				4386006D27F13B0600F8EA11 /* OpenSeaAssetsInteractor.swift in Sources */,
+				4386001527F1399800F8EA11 /* SceneDelegate.swift in Sources */,
+				4386006227F13A7700F8EA11 /* APICall.swift in Sources */,
+				4326B5F327F142D2006AD1A1 /* Font+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4386002427F1399E00F8EA11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4386002D27F1399E00F8EA11 /* nft_gamingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4386002E27F1399E00F8EA11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4386003927F1399E00F8EA11 /* nft_gamingUITestsLaunchTests.swift in Sources */,
+				4386003727F1399E00F8EA11 /* nft_gamingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4386002A27F1399E00F8EA11 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4386000E27F1399800F8EA11 /* nft_gaming */;
+			targetProxy = 4386002927F1399E00F8EA11 /* PBXContainerItemProxy */;
+		};
+		4386003427F1399E00F8EA11 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4386000E27F1399800F8EA11 /* nft_gaming */;
+			targetProxy = 4386003327F1399E00F8EA11 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4386002027F1399D00F8EA11 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4386002127F1399D00F8EA11 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4386003A27F1399E00F8EA11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4386003B27F1399E00F8EA11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4386003D27F1399E00F8EA11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D593847M3E;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = nft_gaming/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hprieto.nft-gaming";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		4386003E27F1399E00F8EA11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D593847M3E;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = nft_gaming/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hprieto.nft-gaming";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		4386004027F1399E00F8EA11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D593847M3E;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hprieto.nft-gamingTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nft_gaming.app/nft_gaming";
+			};
+			name = Debug;
+		};
+		4386004127F1399E00F8EA11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D593847M3E;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hprieto.nft-gamingTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nft_gaming.app/nft_gaming";
+			};
+			name = Release;
+		};
+		4386004327F1399E00F8EA11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D593847M3E;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hprieto.nft-gamingUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = nft_gaming;
+			};
+			name = Debug;
+		};
+		4386004427F1399E00F8EA11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D593847M3E;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hprieto.nft-gamingUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = nft_gaming;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4386000A27F1399800F8EA11 /* Build configuration list for PBXProject "nft_gaming" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4386003A27F1399E00F8EA11 /* Debug */,
+				4386003B27F1399E00F8EA11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4386003C27F1399E00F8EA11 /* Build configuration list for PBXNativeTarget "nft_gaming" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4386003D27F1399E00F8EA11 /* Debug */,
+				4386003E27F1399E00F8EA11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4386003F27F1399E00F8EA11 /* Build configuration list for PBXNativeTarget "nft_gamingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4386004027F1399E00F8EA11 /* Debug */,
+				4386004127F1399E00F8EA11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4386004227F1399E00F8EA11 /* Build configuration list for PBXNativeTarget "nft_gamingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4386004327F1399E00F8EA11 /* Debug */,
+				4386004427F1399E00F8EA11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4386001B27F1399800F8EA11 /* nft_gaming.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4386001C27F1399800F8EA11 /* nft_gaming.xcdatamodel */,
+			);
+			currentVersion = 4386001C27F1399800F8EA11 /* nft_gaming.xcdatamodel */;
+			path = nft_gaming.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		4386004927F13A2100F8EA11 /* open_sea_db_model_v1.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4386004A27F13A2100F8EA11 /* db_model_v1.xcdatamodel */,
+			);
+			currentVersion = 4386004A27F13A2100F8EA11 /* db_model_v1.xcdatamodel */;
+			path = open_sea_db_model_v1.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4386000727F1399800F8EA11 /* Project object */;
+}
