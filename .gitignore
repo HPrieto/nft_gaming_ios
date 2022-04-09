@@ -1,2 +1,4 @@
 /nft_gaming.xcodeproj/xcuserdata
 /nft_gaming/env.plist
+/nft_gaming/src/Models/Moralis/OpenSea*.json
+/nft_gaming/src/Models/OpenSea/Moralis*.json
