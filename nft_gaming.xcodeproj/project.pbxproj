@@ -11,7 +11,12 @@
 		43100DD227F178E800FB3A25 /* AssetCollectionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43100DD127F178E800FB3A25 /* AssetCollectionDetailViewController.swift */; };
 		43100DD427F1793400FB3A25 /* AssetCollectionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43100DD327F1793400FB3A25 /* AssetCollectionListViewModel.swift */; };
 		43100DD627F17BF600FB3A25 /* AssetCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43100DD527F17BF600FB3A25 /* AssetCollectionHeaderView.swift */; };
-		43100DDA27F94EFB00FB3A25 /* OSAssetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43100DD927F94EFB00FB3A25 /* OSAssetCollectionViewCell.swift */; };
+		43100DDA27F94EFB00FB3A25 /* AssetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43100DD927F94EFB00FB3A25 /* AssetCollectionViewCell.swift */; };
+		43100DDD27F964B300FB3A25 /* MoralisModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43100DDC27F964B300FB3A25 /* MoralisModels.swift */; };
+		43100DDF27FA137D00FB3A25 /* MoralisMockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43100DDE27FA137D00FB3A25 /* MoralisMockedData.swift */; };
+		43100DE127FA165300FB3A25 /* MoralisAPIResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 43100DE027FA165300FB3A25 /* MoralisAPIResponse.json */; };
+		43100DE527FA206000FB3A25 /* Moralis+GetContractNFTTransfers.json in Resources */ = {isa = PBXBuildFile; fileRef = 43100DE427FA206000FB3A25 /* Moralis+GetContractNFTTransfers.json */; };
+		43100DE727FAA70000FB3A25 /* NSAttributedString+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43100DE627FAA70000FB3A25 /* NSAttributedString+Extensions.swift */; };
 		4326B5F227F142D2006AD1A1 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4326B5EF27F142D2006AD1A1 /* UIImage+Extensions.swift */; };
 		4326B5F327F142D2006AD1A1 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4326B5F027F142D2006AD1A1 /* Font+Extensions.swift */; };
 		4326B5F427F142D2006AD1A1 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4326B5F127F142D2006AD1A1 /* Double+Extensions.swift */; };
@@ -29,9 +34,9 @@
 		4386004D27F13A2100F8EA11 /* open_sea_db_model_v1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4386004927F13A2100F8EA11 /* open_sea_db_model_v1.xcdatamodeld */; };
 		4386004E27F13A2100F8EA11 /* CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386004B27F13A2100F8EA11 /* CoreDataHelpers.swift */; };
 		4386004F27F13A2100F8EA11 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386004C27F13A2100F8EA11 /* CoreDataStack.swift */; };
-		4386005327F13A3000F8EA11 /* MockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386005027F13A3000F8EA11 /* MockedData.swift */; };
-		4386005427F13A3000F8EA11 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386005127F13A3000F8EA11 /* Models.swift */; };
-		4386005527F13A3000F8EA11 /* Models+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386005227F13A3000F8EA11 /* Models+CoreData.swift */; };
+		4386005327F13A3000F8EA11 /* OpenSeaMockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386005027F13A3000F8EA11 /* OpenSeaMockedData.swift */; };
+		4386005427F13A3000F8EA11 /* OpenSeaModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386005127F13A3000F8EA11 /* OpenSeaModels.swift */; };
+		4386005527F13A3000F8EA11 /* OpenSeaModels+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386005227F13A3000F8EA11 /* OpenSeaModels+CoreData.swift */; };
 		4386006027F13A7700F8EA11 /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386005827F13A7700F8EA11 /* CancelBag.swift */; };
 		4386006127F13A7700F8EA11 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386005927F13A7700F8EA11 /* Helpers.swift */; };
 		4386006227F13A7700F8EA11 /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386005A27F13A7700F8EA11 /* APICall.swift */; };
@@ -44,6 +49,14 @@
 		4386006D27F13B0600F8EA11 /* OpenSeaAssetsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386006C27F13B0600F8EA11 /* OpenSeaAssetsInteractor.swift */; };
 		4386007227F13FA000F8EA11 /* AssetCollectionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386007127F13FA000F8EA11 /* AssetCollectionListViewController.swift */; };
 		4386007427F1402D00F8EA11 /* AssetCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386007327F1402D00F8EA11 /* AssetCollectionViewModel.swift */; };
+		439115602801F43200363F28 /* env.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4391155F2801F43200363F28 /* env.plist */; };
+		439115622801F5A800363F28 /* OpenSea+Assets+Sandbox.json in Resources */ = {isa = PBXBuildFile; fileRef = 439115612801F5A800363F28 /* OpenSea+Assets+Sandbox.json */; };
+		439115642801F5FF00363F28 /* OpenSea+Collection+Sandbox.json in Resources */ = {isa = PBXBuildFile; fileRef = 439115632801F5FF00363F28 /* OpenSea+Collection+Sandbox.json */; };
+		439115662801F72900363F28 /* OpenSea+Collections+Sandbox.json in Resources */ = {isa = PBXBuildFile; fileRef = 439115652801F72900363F28 /* OpenSea+Collections+Sandbox.json */; };
+		439115682801F7A000363F28 /* OpenSea+Collection+Decentraland.json in Resources */ = {isa = PBXBuildFile; fileRef = 439115672801F7A000363F28 /* OpenSea+Collection+Decentraland.json */; };
+		4391156A2801F7E600363F28 /* OpenSea+Assets+Decentraland.json in Resources */ = {isa = PBXBuildFile; fileRef = 439115692801F7E600363F28 /* OpenSea+Assets+Decentraland.json */; };
+		4391156C2801F87900363F28 /* OpenSea+Collections+Decentraland.json in Resources */ = {isa = PBXBuildFile; fileRef = 4391156B2801F87900363F28 /* OpenSea+Collections+Decentraland.json */; };
+		439115702802077E00363F28 /* AssetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4391156F2802077E00363F28 /* AssetDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +81,12 @@
 		43100DD127F178E800FB3A25 /* AssetCollectionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCollectionDetailViewController.swift; sourceTree = "<group>"; };
 		43100DD327F1793400FB3A25 /* AssetCollectionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCollectionListViewModel.swift; sourceTree = "<group>"; };
 		43100DD527F17BF600FB3A25 /* AssetCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCollectionHeaderView.swift; sourceTree = "<group>"; };
-		43100DD927F94EFB00FB3A25 /* OSAssetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSAssetCollectionViewCell.swift; sourceTree = "<group>"; };
+		43100DD927F94EFB00FB3A25 /* AssetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCollectionViewCell.swift; sourceTree = "<group>"; };
+		43100DDC27F964B300FB3A25 /* MoralisModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoralisModels.swift; sourceTree = "<group>"; };
+		43100DDE27FA137D00FB3A25 /* MoralisMockedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoralisMockedData.swift; sourceTree = "<group>"; };
+		43100DE027FA165300FB3A25 /* MoralisAPIResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MoralisAPIResponse.json; sourceTree = "<group>"; };
+		43100DE427FA206000FB3A25 /* Moralis+GetContractNFTTransfers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Moralis+GetContractNFTTransfers.json"; sourceTree = "<group>"; };
+		43100DE627FAA70000FB3A25 /* NSAttributedString+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extensions.swift"; sourceTree = "<group>"; };
 		4326B5EF27F142D2006AD1A1 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		4326B5F027F142D2006AD1A1 /* Font+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
 		4326B5F127F142D2006AD1A1 /* Double+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
@@ -90,9 +108,9 @@
 		4386004A27F13A2100F8EA11 /* db_model_v1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = db_model_v1.xcdatamodel; sourceTree = "<group>"; };
 		4386004B27F13A2100F8EA11 /* CoreDataHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelpers.swift; sourceTree = "<group>"; };
 		4386004C27F13A2100F8EA11 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		4386005027F13A3000F8EA11 /* MockedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockedData.swift; sourceTree = "<group>"; };
-		4386005127F13A3000F8EA11 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		4386005227F13A3000F8EA11 /* Models+CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Models+CoreData.swift"; sourceTree = "<group>"; };
+		4386005027F13A3000F8EA11 /* OpenSeaMockedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSeaMockedData.swift; sourceTree = "<group>"; };
+		4386005127F13A3000F8EA11 /* OpenSeaModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSeaModels.swift; sourceTree = "<group>"; };
+		4386005227F13A3000F8EA11 /* OpenSeaModels+CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OpenSeaModels+CoreData.swift"; sourceTree = "<group>"; };
 		4386005827F13A7700F8EA11 /* CancelBag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
 		4386005927F13A7700F8EA11 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		4386005A27F13A7700F8EA11 /* APICall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
@@ -105,6 +123,14 @@
 		4386006C27F13B0600F8EA11 /* OpenSeaAssetsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSeaAssetsInteractor.swift; sourceTree = "<group>"; };
 		4386007127F13FA000F8EA11 /* AssetCollectionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCollectionListViewController.swift; sourceTree = "<group>"; };
 		4386007327F1402D00F8EA11 /* AssetCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCollectionViewModel.swift; sourceTree = "<group>"; };
+		4391155F2801F43200363F28 /* env.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = env.plist; sourceTree = "<group>"; };
+		439115612801F5A800363F28 /* OpenSea+Assets+Sandbox.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "OpenSea+Assets+Sandbox.json"; sourceTree = "<group>"; };
+		439115632801F5FF00363F28 /* OpenSea+Collection+Sandbox.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "OpenSea+Collection+Sandbox.json"; sourceTree = "<group>"; };
+		439115652801F72900363F28 /* OpenSea+Collections+Sandbox.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "OpenSea+Collections+Sandbox.json"; sourceTree = "<group>"; };
+		439115672801F7A000363F28 /* OpenSea+Collection+Decentraland.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "OpenSea+Collection+Decentraland.json"; sourceTree = "<group>"; };
+		439115692801F7E600363F28 /* OpenSea+Assets+Decentraland.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "OpenSea+Assets+Decentraland.json"; sourceTree = "<group>"; };
+		4391156B2801F87900363F28 /* OpenSea+Collections+Decentraland.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "OpenSea+Collections+Decentraland.json"; sourceTree = "<group>"; };
+		4391156F2802077E00363F28 /* AssetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +169,8 @@
 		43100DD727F94ED900FB3A25 /* Asset */ = {
 			isa = PBXGroup;
 			children = (
+				43100DD927F94EFB00FB3A25 /* AssetCollectionViewCell.swift */,
+				4391156F2802077E00363F28 /* AssetDetailViewController.swift */,
 				43100DD827F94EE100FB3A25 /* OpenSea */,
 			);
 			path = Asset;
@@ -151,9 +179,19 @@
 		43100DD827F94EE100FB3A25 /* OpenSea */ = {
 			isa = PBXGroup;
 			children = (
-				43100DD927F94EFB00FB3A25 /* OSAssetCollectionViewCell.swift */,
 			);
 			path = OpenSea;
+			sourceTree = "<group>";
+		};
+		43100DDB27F9601C00FB3A25 /* Moralis */ = {
+			isa = PBXGroup;
+			children = (
+				43100DDC27F964B300FB3A25 /* MoralisModels.swift */,
+				43100DDE27FA137D00FB3A25 /* MoralisMockedData.swift */,
+				43100DE027FA165300FB3A25 /* MoralisAPIResponse.json */,
+				43100DE427FA206000FB3A25 /* Moralis+GetContractNFTTransfers.json */,
+			);
+			path = Moralis;
 			sourceTree = "<group>";
 		};
 		4326B5EE27F142D2006AD1A1 /* Extensions */ = {
@@ -164,6 +202,7 @@
 				4326B5F127F142D2006AD1A1 /* Double+Extensions.swift */,
 				4326B5F527F1431A006AD1A1 /* UIFont+Extensions.swift */,
 				4326B5F927F145AD006AD1A1 /* UITableView+Extensions.swift */,
+				43100DE627FAA70000FB3A25 /* NSAttributedString+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -198,6 +237,7 @@
 				4386002027F1399D00F8EA11 /* LaunchScreen.storyboard */,
 				4386002327F1399D00F8EA11 /* Info.plist */,
 				4386001B27F1399800F8EA11 /* nft_gaming.xcdatamodeld */,
+				4391155F2801F43200363F28 /* env.plist */,
 			);
 			path = nft_gaming;
 			sourceTree = "<group>";
@@ -238,6 +278,7 @@
 		4386004727F139E900F8EA11 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				43100DDB27F9601C00FB3A25 /* Moralis */,
 				4386005627F13A3F00F8EA11 /* OpenSea */,
 			);
 			path = Models;
@@ -256,9 +297,15 @@
 		4386005627F13A3F00F8EA11 /* OpenSea */ = {
 			isa = PBXGroup;
 			children = (
-				4386005027F13A3000F8EA11 /* MockedData.swift */,
-				4386005127F13A3000F8EA11 /* Models.swift */,
-				4386005227F13A3000F8EA11 /* Models+CoreData.swift */,
+				4386005027F13A3000F8EA11 /* OpenSeaMockedData.swift */,
+				4386005127F13A3000F8EA11 /* OpenSeaModels.swift */,
+				4386005227F13A3000F8EA11 /* OpenSeaModels+CoreData.swift */,
+				439115612801F5A800363F28 /* OpenSea+Assets+Sandbox.json */,
+				439115632801F5FF00363F28 /* OpenSea+Collection+Sandbox.json */,
+				439115652801F72900363F28 /* OpenSea+Collections+Sandbox.json */,
+				439115672801F7A000363F28 /* OpenSea+Collection+Decentraland.json */,
+				439115692801F7E600363F28 /* OpenSea+Assets+Decentraland.json */,
+				4391156B2801F87900363F28 /* OpenSea+Collections+Decentraland.json */,
 			);
 			path = OpenSea;
 			sourceTree = "<group>";
@@ -411,7 +458,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43100DE527FA206000FB3A25 /* Moralis+GetContractNFTTransfers.json in Resources */,
+				439115682801F7A000363F28 /* OpenSea+Collection+Decentraland.json in Resources */,
+				439115642801F5FF00363F28 /* OpenSea+Collection+Sandbox.json in Resources */,
+				43100DE127FA165300FB3A25 /* MoralisAPIResponse.json in Resources */,
 				4386002227F1399D00F8EA11 /* LaunchScreen.storyboard in Resources */,
+				439115622801F5A800363F28 /* OpenSea+Assets+Sandbox.json in Resources */,
+				4391156A2801F7E600363F28 /* OpenSea+Assets+Decentraland.json in Resources */,
+				4391156C2801F87900363F28 /* OpenSea+Collections+Decentraland.json in Resources */,
+				439115662801F72900363F28 /* OpenSea+Collections+Sandbox.json in Resources */,
+				439115602801F43200363F28 /* env.plist in Resources */,
 				4386001F27F1399D00F8EA11 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,12 +493,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43100DDD27F964B300FB3A25 /* MoralisModels.swift in Sources */,
 				43100DD627F17BF600FB3A25 /* AssetCollectionHeaderView.swift in Sources */,
 				4326B5F427F142D2006AD1A1 /* Double+Extensions.swift in Sources */,
 				43100DD027F1783200FB3A25 /* MainCoordinator.swift in Sources */,
-				43100DDA27F94EFB00FB3A25 /* OSAssetCollectionViewCell.swift in Sources */,
+				43100DE727FAA70000FB3A25 /* NSAttributedString+Extensions.swift in Sources */,
+				43100DDA27F94EFB00FB3A25 /* AssetCollectionViewCell.swift in Sources */,
 				4386006427F13A7700F8EA11 /* Store.swift in Sources */,
-				4386005327F13A3000F8EA11 /* MockedData.swift in Sources */,
+				4386005327F13A3000F8EA11 /* OpenSeaMockedData.swift in Sources */,
 				4386004F27F13A2100F8EA11 /* CoreDataStack.swift in Sources */,
 				43100DD427F1793400FB3A25 /* AssetCollectionListViewModel.swift in Sources */,
 				4386004E27F13A2100F8EA11 /* CoreDataHelpers.swift in Sources */,
@@ -450,12 +508,13 @@
 				4386006727F13A7700F8EA11 /* NetworkingHelpers.swift in Sources */,
 				4386004D27F13A2100F8EA11 /* open_sea_db_model_v1.xcdatamodeld in Sources */,
 				4326B5FC27F14662006AD1A1 /* AssetCollectionTableViewCell.swift in Sources */,
-				4386005527F13A3000F8EA11 /* Models+CoreData.swift in Sources */,
+				4386005527F13A3000F8EA11 /* OpenSeaModels+CoreData.swift in Sources */,
 				4326B5FA27F145AD006AD1A1 /* UITableView+Extensions.swift in Sources */,
 				4386006327F13A7700F8EA11 /* WebRepository.swift in Sources */,
 				4386001D27F1399800F8EA11 /* nft_gaming.xcdatamodeld in Sources */,
+				43100DDF27FA137D00FB3A25 /* MoralisMockedData.swift in Sources */,
 				4386006127F13A7700F8EA11 /* Helpers.swift in Sources */,
-				4386005427F13A3000F8EA11 /* Models.swift in Sources */,
+				4386005427F13A3000F8EA11 /* OpenSeaModels.swift in Sources */,
 				4326B5F627F1431A006AD1A1 /* UIFont+Extensions.swift in Sources */,
 				4386007427F1402D00F8EA11 /* AssetCollectionViewModel.swift in Sources */,
 				4386006027F13A7700F8EA11 /* CancelBag.swift in Sources */,
@@ -466,6 +525,7 @@
 				4386001327F1399800F8EA11 /* AppDelegate.swift in Sources */,
 				4386006527F13A7700F8EA11 /* Loadable.swift in Sources */,
 				4386006D27F13B0600F8EA11 /* OpenSeaAssetsInteractor.swift in Sources */,
+				439115702802077E00363F28 /* AssetDetailViewController.swift in Sources */,
 				4386001527F1399800F8EA11 /* SceneDelegate.swift in Sources */,
 				4386006227F13A7700F8EA11 /* APICall.swift in Sources */,
 				4326B5F327F142D2006AD1A1 /* Font+Extensions.swift in Sources */,
@@ -566,7 +626,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -620,7 +680,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

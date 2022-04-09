@@ -46,7 +46,7 @@ extension OSAsset {
         self.description = managedObject.desc
         self.externalLink = managedObject.externalLink
         self.permalink = managedObject.permalink
-        self.lastSale = managedObject.lastSale
+        // self.lastSale = 0.0 // TODO: lastSale coreData model
         self.collection = OSAssetCollection(managedObject: managedObject.collection)
         if let managedTraits: [OSTrait] = managedObject.traits?.toArray(of: OSTraitMO.self).compactMap({ OSTrait(managedObject: $0) }) {
             self.traits = managedTraits
@@ -75,7 +75,7 @@ extension OSAsset {
         asset.desc = description
         asset.externalLink = externalLink
         asset.permalink = permalink
-        asset.lastSale = lastSale ?? 0.0
+        asset.lastSale = 0.0 // TODO: LastSale
         asset.collection = OSAssetCollectionMO.insertNew(in: context)
         if let traits = traits?.compactMap({ trait in
             OSTraitMO.insertNew(in: context)

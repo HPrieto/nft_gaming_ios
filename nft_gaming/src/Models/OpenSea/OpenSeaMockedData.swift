@@ -9,6 +9,31 @@ import Foundation
 
 #if DEBUG
 
+extension OSAssetsResponse {
+    
+    static var sandboxMockedData: OSAssetsResponse {
+        let jsonData = Data.data(fromJsonFileNamed: "OpenSea+Assets+Sandbox")!
+        return try! JSONDecoder().decode(OSAssetsResponse.self, from: jsonData)
+    }
+    
+    static var decentralandMockedData: OSAssetsResponse {
+        let jsonData = Data.data(fromJsonFileNamed: "OpenSea+Assets+Decentraland")!
+        return try! JSONDecoder().decode(OSAssetsResponse.self, from: jsonData)
+    }
+}
+
+extension OSAsset {
+    
+    static let mockedData: [OSAsset] = [
+        OSAsset(
+            tokenId: "842892",
+            imageUrl: "https://lh3.googleusercontent.com/pSEZm8OzaEcp241RLnWcI1UA_sbwQmPKVRTB9JxtYDTp8c8nvkjAZAWxHhdowmM9He6DxMG4osqyv_DoAt6NX5BJs4raiRPLHSWwGg=w180",
+            name: "LAND (-118,15)",
+            collection: OSAssetCollection.mockedData[0]
+        )
+    ]
+}
+
 extension OSAsset.OSAssetCollection {
     
     static let mockedData: [OSAsset.OSAssetCollection] = [

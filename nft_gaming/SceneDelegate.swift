@@ -20,6 +20,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         window?.makeKeyAndVisible()
         window?.rootViewController = UINavigationController(rootViewController: AssetCollectionListViewController(AssetCollectionListViewModel()))
+        
+        let data = MoralisAPIResponse<[MoralisTransfer]>.mockedData
+        print(data.result.count)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

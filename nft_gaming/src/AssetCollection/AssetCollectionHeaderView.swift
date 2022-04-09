@@ -45,7 +45,8 @@ class AssetCollectionHeaderView: UIView {
     private(set) lazy var descriptionLabel: UILabel = {
         let view = UILabel()
         view.numberOfLines = 10
-        view.font = .avenirNext(weight: .regular, size: 16)
+        view.font = .avenirNext(weight: .medium, size: 14)
+        view.textColor = .gray
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()

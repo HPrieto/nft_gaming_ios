@@ -7,6 +7,14 @@
 
 import UIKit
 
+// MARK: - Response Models
+
+struct OSAssetsResponse: Codable {
+    var next: String?
+    var previous: String?
+    var assets: [OSAsset] = [OSAsset]()
+}
+
 // MARK: OSAsset
 
 struct OSAsset: Codable {
@@ -24,7 +32,7 @@ struct OSAsset: Codable {
     public var description: String?
     public var externalLink: String?
     public var permalink: String?
-    public var lastSale: Float?
+    public var lastSale: LastSale?
     public var collection: OSAssetCollection?
     public var traits: [OSTrait]?
     public var assetContract: OSAssetContract?
@@ -77,9 +85,30 @@ struct OSAsset: Codable {
         owner = try container.decodeIfPresent(OSAccount.self, forKey: .owner)
         permalink = try container.decodeIfPresent(String.self, forKey: .permalink)
         traits = try container.decodeIfPresent([OSTrait].self, forKey: .traits)
-        lastSale = try container.decodeIfPresent(Float.self, forKey: .lastSale)
+        lastSale = try container.decodeIfPresent(LastSale.self, forKey: .lastSale)
         collection = try container.decodeIfPresent(OSAssetCollection.self, forKey: .collection)
         sellOrders = try container.decodeIfPresent([OSSellOrder].self, forKey: .sellOrders)
+    }
+    
+    init(tokenId: String,
+         imageUrl: String? = nil,
+         imageThumbnailUrl: String? = nil,
+         name: String? = nil,
+         description: String? = nil,
+         collection: OSAsset.OSAssetCollection? = nil,
+         traits: [OSAsset.OSTrait] = [OSAsset.OSTrait](),
+         assetContract: OSAsset.OSAssetContract? = nil,
+         owner: OSAsset.OSAccount? = nil
+    ) {
+        self.tokenId = tokenId
+        self.imageUrl = imageUrl
+        self.imageThumbnailUrl = imageThumbnailUrl
+        self.name = name
+        self.description = description
+        self.collection = collection
+        self.traits = traits
+        self.assetContract = assetContract
+        self.owner = owner
     }
 }
 
@@ -159,6 +188,183 @@ extension OSAsset {
             self.featuredImageUrlString = featuredImageUrlString
             self.stats = stats
         }
+    }
+}
+
+// MARK: - LastSale
+
+extension OSAsset {
+    struct LastSale: Codable {
+        var asset: Asset
+        var eventType: String
+        var eventTimestamp: Date
+        var auctionType: String
+        var totalPrice: String
+        var paymentToken: PaymentToken
+        var transaction: Transaction
+        var createdDate: Date
+        var quantity: String
+        
+        private enum CodingKeys: String, CodingKey {
+            case asset = "asset"
+            case eventType = "event_type"
+            case eventTimestamp = "event_timestamp"
+            case auctionType = "auction_type"
+            case totalPrice = "total_price"
+            case paymentToken = "payment_token"
+            case transaction = "transaction"
+            case createdDate = "created_date"
+            case quantity = "quantity"
+        }
+        
+        init(from decoder: Decoder) throws {
+            let container = try decoder.container(keyedBy: CodingKeys.self)
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+            
+            self.asset = try container.decode(Asset.self, forKey: .asset)
+            self.eventType = try container.decode(String.self, forKey: .eventType)
+            let eventTimestampStr: String = try container.decode(String.self, forKey: .eventTimestamp)
+            if let eventTimestamp = dateFormatter.date(from: eventTimestampStr) {
+                self.eventTimestamp = eventTimestamp
+            } else {
+                self.eventTimestamp = Date()
+            }
+            self.auctionType = try container.decode(String.self, forKey: .auctionType)
+            self.totalPrice = try container.decode(String.self, forKey: .totalPrice)
+            self.paymentToken = try container.decode(PaymentToken.self, forKey: .paymentToken)
+            self.transaction = try container.decode(LastSale.Transaction.self, forKey: .transaction)
+            let createdDateStr: String = try container.decode(String.self, forKey: .createdDate)
+            if let createdDate = dateFormatter.date(from: createdDateStr) {
+                self.createdDate = createdDate
+            } else {
+                self.createdDate = Date()
+            }
+            self.quantity = try container.decode(String.self, forKey: .quantity)
+        }
+    }
+}
+
+extension OSAsset.LastSale {
+    struct PaymentToken: Codable {
+        var symbol: String
+        var address: String
+        var imageUrl: String
+        var name: String
+        var decimals: Int32
+        var ethPrice: String
+        var usdPrice: String
+        
+        private enum CodingKeys: String, CodingKey {
+            case symbol = "symbol"
+            case address = "address"
+            case imageUrl = "image_url"
+            case name = "name"
+            case decimals = "decimals"
+            case ethPrice = "eth_price"
+            case usdPrice = "usd_price"
+        }
+        
+        init(from decoder: Decoder) throws {
+            let container = try decoder.container(keyedBy: CodingKeys.self)
+            self.symbol = try container.decode(String.self, forKey: .symbol)
+            self.address = try container.decode(String.self, forKey: .address)
+            self.imageUrl = try container.decode(String.self, forKey: .imageUrl)
+            self.name = try container.decode(String.self, forKey: .name)
+            self.decimals = try container.decode(Int32.self, forKey: .decimals)
+            self.ethPrice = try container.decode(String.self, forKey: .ethPrice)
+            self.usdPrice = try container.decode(String.self, forKey: .usdPrice)
+        }
+    }
+}
+
+extension OSAsset.LastSale {
+    struct Asset: Codable {
+        var decimals: Int
+        var tokenId: String
+        
+        private enum CodingKeys: String, CodingKey {
+            case decimals = "decimals"
+            case tokenId = "token_id"
+        }
+        
+        init(from decoder: Decoder) throws {
+            let container = try decoder.container(keyedBy: CodingKeys.self)
+            self.decimals = try container.decode(Int.self, forKey: .decimals)
+            self.tokenId = try container.decode(String.self, forKey: .tokenId)
+        }
+    }
+    
+    struct Transaction: Codable {
+        var blockHash: String
+        var blockNumber: String
+        var fromAccount: Account
+        var id: Int32
+        var timestamp: Date
+        var toAccount: Account
+        var transactionHash: String
+        var transactionIndex: String
+        
+        private enum CodingKeys: String, CodingKey {
+            case blockHash = "block_hash"
+            case blockNumber = "block_number"
+            case fromAccount = "from_account"
+            case id = "id"
+            case timestamp = "timestamp"
+            case toAccount = "to_account"
+            case transactionHash = "transaction_hash"
+            case transactionIndex = "transaction_index"
+        }
+        
+        init(from decoder: Decoder) throws {
+            let container = try decoder.container(keyedBy: CodingKeys.self)
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+            
+            self.blockHash = try container.decode(String.self, forKey: .blockHash)
+            self.blockNumber = try container.decode(String.self, forKey: .blockNumber)
+            self.fromAccount = try container.decode(Account.self, forKey: .fromAccount)
+            self.id = try container.decode(Int32.self, forKey: .id)
+            let timestampStr: String = try container.decode(String.self, forKey: .timestamp)
+            if let timestamp = dateFormatter.date(from: timestampStr) {
+                self.timestamp = timestamp
+            } else {
+                self.timestamp = Date()
+            }
+            self.toAccount = try container.decode(Account.self, forKey: .toAccount)
+            self.transactionHash = try container.decode(String.self, forKey: .transactionHash)
+            self.transactionIndex = try container.decode(String.self, forKey: .transactionIndex)
+        }
+    }
+}
+
+extension OSAsset.LastSale.Transaction {
+    struct Account: Codable {
+        var user: User?
+        var profileImageUrl: String?
+        var address: String?
+        var config: String?
+        
+        private enum CodingKeys: String, CodingKey {
+            case user = "user"
+            case profileImageUrl = "profile_image_url"
+            case address = "address"
+            case config = "config"
+        }
+        
+        init(from decoder: Decoder) throws {
+            let container = try decoder.container(keyedBy: CodingKeys.self)
+            self.user = try container.decodeIfPresent(User.self, forKey: .user)
+            self.profileImageUrl = try container.decodeIfPresent(String.self, forKey: .profileImageUrl)
+            self.address = try container.decodeIfPresent(String.self, forKey: .address)
+            self.config = try container.decodeIfPresent(String.self, forKey: .config)
+        }
+    }
+}
+
+extension OSAsset.LastSale.Transaction.Account {
+    struct User: Codable {
+        var username: String?
     }
 }
 
